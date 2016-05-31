@@ -11,18 +11,18 @@
 @implementation MGCircleLayout
 
 // 布局每次变化的时候就会调用该方法
-- (void)prepareLayout{
-    [super prepareLayout];
-    // 设置行宽
-    self.minimumLineSpacing = 100;
-    self.minimumInteritemSpacing = 10;
-    // 设置滚动方向
-    self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    // 设置每一个item的大小
-    self.itemSize = CGSizeMake(100, 100);
-    // 设置额外滚动区域
-    self.collectionView.contentInset = UIEdgeInsetsMake(0, self.collectionView.frame.size.width * 0.5-50, 0, 160);
-}
+//- (void)prepareLayout{
+//    [super prepareLayout];
+//    // 设置行宽
+//    self.minimumLineSpacing = 100;
+//    self.minimumInteritemSpacing = 10;
+//    // 设置滚动方向
+//    self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+//    // 设置每一个item的大小
+//    self.itemSize = CGSizeMake(100, 100);
+//    // 设置额外滚动区域
+//    self.collectionView.contentInset = UIEdgeInsetsMake(0, self.collectionView.frame.size.width * 0.5-50, 0, 160);
+//}
 
 /**
  *  每次边界发生变化的时候就会调用该方法
@@ -47,10 +47,10 @@
     
     UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
-     attrs.size = CGSizeMake(50, 50);
+     attrs.size = CGSizeMake(75, 75);
     
     // 圆的半径
-    CGFloat circleRadius = 70;
+    CGFloat circleRadius = 100;
     CGPoint circleCenter = CGPointMake(self.collectionView.frame.size.width * 0.5, self.collectionView.frame.size.height * 0.5);
     
     // 每个item之间的角度

@@ -64,9 +64,11 @@ static NSString *const ID = @"imageCell";
         collectionView.delegate = self;
         
         // 设置UICollectionView的参数
-        CGFloat w = self.view.frame.size.width;
-        CGRect rect = CGRectMake(0, 0, w, 200);
+        CGFloat w = [UIScreen mainScreen].bounds.size.width;
+        CGFloat h = [UIScreen mainScreen].bounds.size.height;
+        CGRect rect = CGRectMake(0, h*0.15, w, 400);
         collectionView.frame = rect;
+        collectionView.backgroundColor = [UIColor colorWithHue:23 saturation:0.3 brightness:0.9 alpha:0.9];
         collectionView;
     });
     

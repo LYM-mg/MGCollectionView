@@ -21,12 +21,12 @@
  *   对每一个cell的布局对象做处理
  */
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSArray *angles = @[@0, @(-0.2), @(-0.5), @(0.2), @(0.5)];
+    NSArray *angles = @[@0, @(-0.2), @(-0.4), @(-0.6), @(-8), @(0.2), @(0.4), @(0.6), @(8)];
     UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-    attrs.size = CGSizeMake(100, 100);
+    attrs.size = CGSizeMake(150, 150);
     attrs.center = CGPointMake(self.collectionView.frame.size.width * 0.5, self.collectionView.frame.size.height * 0.5);
     
-    if (indexPath.item >= 5){
+    if (indexPath.item >= 9){
         attrs.hidden = YES;
     }else{
         attrs.hidden = NO;
