@@ -14,6 +14,8 @@
 		3AD24F0A1CFDCCC0001E905F /* MGCollectionView.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AD24F081CFDCCC0001E905F /* MGCollectionView.xcdatamodeld */; };
 		3AD24F0C1CFDCCC0001E905F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD24F0B1CFDCCC0001E905F /* Assets.xcassets */; };
 		3AD24F0F1CFDCCC0001E905F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD24F0D1CFDCCC0001E905F /* LaunchScreen.storyboard */; };
+		3AD24F191CFDD0F9001E905F /* MGImgaeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD24F171CFDD0F9001E905F /* MGImgaeCell.m */; settings = {ASSET_TAGS = (); }; };
+		3AD24F1A1CFDD0F9001E905F /* MGImgaeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AD24F181CFDD0F9001E905F /* MGImgaeCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		3AD24F0B1CFDCCC0001E905F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AD24F0E1CFDCCC0001E905F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AD24F101CFDCCC0001E905F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AD24F161CFDD0F9001E905F /* MGImgaeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGImgaeCell.h; sourceTree = "<group>"; };
+		3AD24F171CFDD0F9001E905F /* MGImgaeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGImgaeCell.m; sourceTree = "<group>"; };
+		3AD24F181CFDD0F9001E905F /* MGImgaeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MGImgaeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +65,11 @@
 		3AD24EFB1CFDCCC0001E905F /* MGCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				3AD24F1D1CFDD120001E905F /* Layout */,
+				3AD24F1C1CFDD113001E905F /* Controller */,
+				3AD24F1B1CFDD10A001E905F /* Cell */,
 				3AD24EFF1CFDCCC0001E905F /* AppDelegate.h */,
 				3AD24F001CFDCCC0001E905F /* AppDelegate.m */,
-				3AD24F021CFDCCC0001E905F /* ViewController.h */,
-				3AD24F031CFDCCC0001E905F /* ViewController.m */,
 				3AD24F051CFDCCC0001E905F /* Main.storyboard */,
 				3AD24F0B1CFDCCC0001E905F /* Assets.xcassets */,
 				3AD24F0D1CFDCCC0001E905F /* LaunchScreen.storyboard */,
@@ -80,6 +86,32 @@
 				3AD24EFD1CFDCCC0001E905F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AD24F1B1CFDD10A001E905F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3AD24F161CFDD0F9001E905F /* MGImgaeCell.h */,
+				3AD24F171CFDD0F9001E905F /* MGImgaeCell.m */,
+				3AD24F181CFDD0F9001E905F /* MGImgaeCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		3AD24F1C1CFDD113001E905F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3AD24F021CFDCCC0001E905F /* ViewController.h */,
+				3AD24F031CFDCCC0001E905F /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3AD24F1D1CFDD120001E905F /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +175,7 @@
 				3AD24F0F1CFDCCC0001E905F /* LaunchScreen.storyboard in Resources */,
 				3AD24F0C1CFDCCC0001E905F /* Assets.xcassets in Resources */,
 				3AD24F071CFDCCC0001E905F /* Main.storyboard in Resources */,
+				3AD24F1A1CFDD0F9001E905F /* MGImgaeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD24F0A1CFDCCC0001E905F /* MGCollectionView.xcdatamodeld in Sources */,
+				3AD24F191CFDD0F9001E905F /* MGImgaeCell.m in Sources */,
 				3AD24F041CFDCCC0001E905F /* ViewController.m in Sources */,
 				3AD24F011CFDCCC0001E905F /* AppDelegate.m in Sources */,
 				3AD24EFE1CFDCCC0001E905F /* main.m in Sources */,
