@@ -18,7 +18,7 @@
 - (void)awakeFromNib {
     self.imageView.layer.borderWidth = 3;
     self.imageView.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.imageView.layer.cornerRadius = 3;
+    self.imageView.layer.cornerRadius = self.frame.size.width * 0.04;
     self.imageView.clipsToBounds = YES;
 }
 

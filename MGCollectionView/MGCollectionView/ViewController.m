@@ -95,11 +95,30 @@ static NSString *const ID = @"imageCell";
 
 #pragma mark- UICollectionViewDelegate 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    // 删除模型数据
-    [self.images removeObjectAtIndex:indexPath.item];
     
-   // 删UI(刷新UI)
-    [collectionView deleteItemsAtIndexPaths:@[indexPath]];
+    // 取得当前cell
+    MGImgaeCell *cell = (MGImgaeCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    [UIView animateWithDuration:1.0 animations:^{
+        CGAffineTransform form1 = CGAffineTransformMakeScale(2.0, 2.0);
+        CGAffineTransform form2 = CGAffineTransformMakeRotation(2*M_PI);
+        cell.transform = CGAffineTransformConcat(form1, form2);
+    }];
+   
+//    CABasicAnimation *base = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+//    base.fromValue = @(1.0);
+//    base.toValue = @(2.0);
+//    base.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];
+//    base.duration = 1.0;
+//    [cell.layer addAnimation:base forKey:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 删除模型数据
+        [self.images removeObjectAtIndex:indexPath.item];
+        
+        // 删UI(刷新UI)
+        [collectionView deleteItemsAtIndexPaths:@[indexPath]];
+    });
+    
 }
 
 @end
