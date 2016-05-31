@@ -16,6 +16,8 @@
 		3AD24F0F1CFDCCC0001E905F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD24F0D1CFDCCC0001E905F /* LaunchScreen.storyboard */; };
 		3AD24F191CFDD0F9001E905F /* MGImgaeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD24F171CFDD0F9001E905F /* MGImgaeCell.m */; settings = {ASSET_TAGS = (); }; };
 		3AD24F1A1CFDD0F9001E905F /* MGImgaeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AD24F181CFDD0F9001E905F /* MGImgaeCell.xib */; settings = {ASSET_TAGS = (); }; };
+		3AD24F231CFDD371001E905F /* MGCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD24F221CFDD371001E905F /* MGCircleLayout.m */; settings = {ASSET_TAGS = (); }; };
+		3AD24F261CFDD7AB001E905F /* MGStackLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD24F251CFDD7AB001E905F /* MGStackLayout.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,10 @@
 		3AD24F161CFDD0F9001E905F /* MGImgaeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGImgaeCell.h; sourceTree = "<group>"; };
 		3AD24F171CFDD0F9001E905F /* MGImgaeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGImgaeCell.m; sourceTree = "<group>"; };
 		3AD24F181CFDD0F9001E905F /* MGImgaeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MGImgaeCell.xib; sourceTree = "<group>"; };
+		3AD24F211CFDD371001E905F /* MGCircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCircleLayout.h; sourceTree = "<group>"; };
+		3AD24F221CFDD371001E905F /* MGCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCircleLayout.m; sourceTree = "<group>"; };
+		3AD24F241CFDD7AB001E905F /* MGStackLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGStackLayout.h; sourceTree = "<group>"; };
+		3AD24F251CFDD7AB001E905F /* MGStackLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGStackLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 		3AD24F1D1CFDD120001E905F /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				3AD24F211CFDD371001E905F /* MGCircleLayout.h */,
+				3AD24F221CFDD371001E905F /* MGCircleLayout.m */,
+				3AD24F241CFDD7AB001E905F /* MGStackLayout.h */,
+				3AD24F251CFDD7AB001E905F /* MGStackLayout.m */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -187,8 +197,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD24F0A1CFDCCC0001E905F /* MGCollectionView.xcdatamodeld in Sources */,
+				3AD24F261CFDD7AB001E905F /* MGStackLayout.m in Sources */,
 				3AD24F191CFDD0F9001E905F /* MGImgaeCell.m in Sources */,
 				3AD24F041CFDCCC0001E905F /* ViewController.m in Sources */,
+				3AD24F231CFDD371001E905F /* MGCircleLayout.m in Sources */,
 				3AD24F011CFDCCC0001E905F /* AppDelegate.m in Sources */,
 				3AD24EFE1CFDCCC0001E905F /* main.m in Sources */,
 			);

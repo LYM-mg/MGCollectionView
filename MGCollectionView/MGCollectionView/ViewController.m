@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "MGImgaeCell.h"
+#import "MGCircleLayout.h"
+#import "MGStackLayout.h"
 
 @interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 /** 数据源数组 */
@@ -44,11 +47,19 @@ static NSString *const ID = @"imageCell";
     // Dispose of any resources that can be recreated.
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    if ([self.collectionView.collectionViewLayout isKindOfClass:[MGStackLayout class]]) {
+        [self.collectionView setCollectionViewLayout:[[MGCircleLayout alloc] init] animated:YES];
+    } else {
+        [self.collectionView setCollectionViewLayout:[[MGStackLayout alloc] init] animated:YES];
+    }
+}
+
 - (void)setUpCollectionView{
     
     // 设置UICollectionView的参数
     UICollectionView *collectionView = ({
-        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];
+        UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:[[MGCircleLayout alloc] init]];
         collectionView.dataSource = self;
         collectionView.delegate = self;
         
@@ -59,11 +70,12 @@ static NSString *const ID = @"imageCell";
         collectionView;
     });
     
-//    [collectionView registerNib:[UINib nibWithNibName:@"MGImageCell" bundle:nil] forCellWithReuseIdentifier:ID];
     [self.view addSubview:collectionView];
     self.collectionView = collectionView;
     // 注册
-    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"MGImageCell"];
+    [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MGImgaeCell class]) bundle:nil] forCellWithReuseIdentifier:ID];
+//    [collectionView registerNib:[UINib nibWithNibName:@"MGImageCell" bundle:nil] forCellWithReuseIdentifier:ID];
+//    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"MGImageCell"];
 }
 
 #pragma mark- UICollectionViewDataSource
@@ -74,9 +86,18 @@ static NSString *const ID = @"imageCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    MGImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    MGImgaeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
     cell.image = self.images[indexPath.item];
     return cell;
+}
+
+#pragma mark- UICollectionViewDelegate 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    // 删除模型数据
+    [self.images removeObjectAtIndex:indexPath.item];
+    
+   // 删UI(刷新UI)
+    [collectionView deleteItemsAtIndexPaths:@[indexPath]];
 }
 
 @end

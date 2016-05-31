@@ -1,5 +1,5 @@
 //
-//  MGImgaeCell.h
+//  MGStackLayout.h
 //  MGCollectionView
 //
 //  Created by ming on 16/5/31.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MGImgaeCell : UICollectionViewCell
-// 外界传入图片的名称
-@property (nonatomic, copy) NSString *image;
+@interface MGStackLayout : UICollectionViewFlowLayout
+
 @end
